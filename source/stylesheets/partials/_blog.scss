@@ -1,0 +1,227 @@
+.content {
+  .main {
+    .blog-hgroup {
+      margin-top: 8em;
+    }
+  }
+}
+
+article {
+  .intro {
+    @include span-columns(12, 12);
+    .holder {
+      @include span-columns(2, 12);
+      padding: 0 0 2em;
+      img {
+        width: 4em;
+        margin: 0;
+      }
+    }
+    h2 {
+      @include span-columns(9, 12);
+      padding: 0em 6% 0.3em 0em;
+      font-size: 2.4em;
+      color: $stone-grey;
+    }
+    .date {
+      display: block;
+      float: left;
+      font-size: 1em;
+      padding: 0 1em 2em 0;
+      color: rgb(160,160,160);
+      line-height: 1.3;
+    }
+    .tweetbutton {
+      background: $carolina-blue;
+      color: rgb(255,255,255);
+      text-decoration: none;
+      font-family: $bold-font;
+      font-size: 0.8em;
+      padding: 0.2em 0.5em;
+      @include border-radius(0.3em);
+      i {
+        line-height: 1.2em;
+      }
+      &:hover {
+        background: $baby-blue;
+        @include transition(background .3s ease-in);
+      }
+    }
+    .count {
+      color: lighten($stone-grey, 30%);
+      text-decoration: none;
+    }
+  }
+  .section-title {
+    color: $baby-blue;
+    font-size: 1.25em;
+    padding: 0.875em 0;
+  }
+  .ios-screenshot {
+    max-width: 60%;
+    margin: 1em auto;
+    display: block;
+  }
+  strong {
+    font-family: $bold-font;
+  }
+}
+
+.recent-articles {
+  clear: both;
+  li {
+    padding-top: 2em;
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+  a {
+    text-decoration: none;
+    border-bottom: none;
+  }
+  .date {
+    @include span-columns(2, 12);
+    margin-bottom: 5em;
+    a {
+      color: rgb(160,160,160);
+      display: block;
+      float: left;
+      text-align: center;
+      font-size: 0.875em;
+      width: 4em;
+      height: 4em;
+      line-height: 4em;
+      margin-right: 2em;
+      border: 0.1em solid $carolina-blue;
+      text-decoration: none;
+      @include border-radius(50%);
+      &:hover {
+        background: $carolina-blue;
+        color: rgb(255,255,255);
+        @include transition(background .3s ease-in);
+      }
+    }
+  }
+  h2 {
+    a {
+      color: lighten($stone-grey, 15%);
+      text-decoration: none;
+      font-family: $regular-font;
+      font-size: 1.7em;
+      &:hover {
+        color: darken($stone-grey, 10%);
+        @include transition(color .3s ease-in);
+      }
+    }
+  }
+  p {
+    a {
+      font-family: $light-font;
+      border-bottom: none;
+      text-decoration: none;
+      color: $stone-grey;
+      &:hover {
+        color: darken($stone-grey, 20%);
+        @include transition(color .3s ease-in);
+      }
+    }
+  }
+  .article-divide {
+    border-bottom: 0.1em rgb(240,240,240) solid;
+    display: block;
+    width: 45%;
+    margin: 0 auto;
+    height: 1em;
+
+  }
+}
+
+@include breakpoint(phone) {
+  .content {
+    .main {
+      clear: both;
+      .blog-hgroup {
+        margin: 0em auto 2em;
+        padding-top: 2em;
+        width: 70%;
+      }
+      article {
+        .holder {
+          display: none;
+        }
+        h2 {
+          @include span-columns(12, 12);
+        }
+      }
+      .recent-articles {
+        .date {
+          width: 100%;
+          margin-bottom: 1em;
+          a {
+            margin: 0 auto;
+            display: block;
+            float: none;
+          }
+        }
+        h2 {
+          text-align: center;
+        }
+      }
+    }
+  }
+  .main {
+    hgroup {
+      margin-top: 0;
+    }
+  }
+}
+
+em {
+  font-family: $italic-font;
+  font-size: 2em;
+  line-height: 1.1em;
+  color: lighten($stone-grey, 10%);
+  display: block;
+  width: 80%;
+  padding-left: 2%;
+  border-left: 0.2em solid $carolina-blue;
+  margin: 1em 0;
+}
+
+.full-article {
+  width: 85%;
+  display: block;
+  margin: 1em auto 0;
+}
+
+.border {
+  margin: 3em auto;
+  border: 0.1em solid lighten($stone-grey, 55%);
+}
+
+.caption {
+  font-family: $bold-font;
+  font-size: 0.75em;
+  text-align: center;
+  display: block;
+  padding: 0.5em 0 2em;
+  a, a:visited  {
+    text-decoration: none;
+    color: lighten($stone-grey, 35%);
+    padding-bottom: 0.2em;
+    border-bottom: 0.1em solid lighten($stone-grey, 45%);
+    &:hover, &.active{
+      color: $baby-blue;
+      @include transition(.3s color ease-in-out);
+    }
+  }
+}
+.code {
+  display: block;
+  font-family: monospace;
+  background: rgb(255,251,203);
+  padding: 0 0 0 1em;
+  width: 16em;
+  margin: 1em 0;
+}
+

@@ -1,0 +1,16 @@
+!!! 5
+/[if IE 8] <html class="no-js ie8 oldie" lang="en">
+/[if IE 9] <html class="no-js ie9 oldie" lang="en">
+<!--[if gt IE 9]><!-->
+%html{:class => 'no-js', :lang => 'en'}<>
+  <!--<![endif]-->
+  = partial 'layouts/partials/head'
+  %body{:class => page_classes}
+    = partial 'layouts/partials/tracking'
+    .liner
+      = partial 'layouts/partials/sidebar'
+
+      .content
+        = yield
+        = partial 'layouts/partials/google'
+        = partial 'layouts/partials/footer'

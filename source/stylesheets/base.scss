@@ -1,0 +1,233 @@
+@import 'partials/typography';
+@import 'partials/grid';
+@import 'partials/home';
+@import 'partials/projects';
+@import 'partials/blog';
+@import 'font-awesome';
+
+body {
+  -webkit-font-smoothing: antialiased;
+  background: white;
+  font-family: $light-font;
+}
+
+.liner {
+  @include container;
+  border-left: 1px solid rgb(230,230,230);
+  padding: 0;
+}
+
+a {
+  &:hover, &.active {
+    color: $baby-blue;
+    @include transition(.3s color ease-in-out);
+  }
+}
+
+aside {
+  background: url(/images/sidebar.png) no-repeat;
+  min-height: 50em;
+  width: 19em;
+  padding-top: 12em;
+  float: left;
+  margin-right: 2em;
+  a {
+    text-decoration: none;
+    hgroup {
+      margin-left: 2em;
+      width: 14em;
+      padding-bottom: 1em;
+      border-bottom: 1px solid rgb(230,230,230);
+      h1 {
+        font-family: $bold-font;
+        font-size: 1.5em;
+        color: rgb(110,110,110);
+        padding-bottom: 0.3em;
+      }
+      h2 {
+        font-family: $regular-font;
+        font-size: 1.1em;
+        color: rgb(180,180,180);
+      }
+    }
+  }
+  nav {
+    margin-left: 2em;
+    width: 14em;
+    border-top: 2px solid rgb(255,255,255);
+    font-family: $bold-font;
+    ul {
+      margin-top: 1.4em;
+      li {
+        padding-bottom: 0.6em;
+        a {
+          color: rgb(160,160,160);
+          text-decoration: none;
+          font-size: 0.875em;
+          display: block;
+        }
+      }
+      &.mobile {
+        display: none;
+      }
+    }
+  }
+}
+
+.social {
+  margin-left: 2em;
+  position: fixed;
+  bottom: 5%;
+  a {
+    color: rgb(230,230,230);
+    font-family: font-awesome;
+    text-decoration: none;
+    font-size: 2em;
+    padding: 0em 0.4em;
+    &:hover, &.active {
+      color: $carolina-blue;
+      @include transition(.3s color ease-in-out);
+    }
+  }
+  p {
+    padding: 1em 0 0 0.8em;
+    font-size: 0.875em;
+    line-height: 1.4em;
+    color: rgb(190,190,190);
+  }
+}
+
+.content {
+  width: 38em;
+  float: left;
+  -webkit-animation-name: content;
+  -webkit-animation-duration: 1s;
+}
+
+footer {
+  display: none;
+  padding-bottom: 1em;
+  .social {
+    border-top: 1px solid rgb(240,240,240);
+    position: relative;
+    clear: both;
+    text-align: center;
+    margin: 0 auto;
+    padding: 1em 0 0;
+    a {
+      font-size: 1.4em;
+      display: inline;
+    }
+    p {
+      padding: 1em 0 0 0;
+    }
+  }
+}
+
+@-webkit-keyframes content {
+  from {
+    @include transform(scale(1));
+    opacity: 0;
+  }
+  to {
+    @include transform(scale(1));
+    opacity: 1;
+  }
+}
+
+@include breakpoint(medium-screens) {
+  aside {
+    width: 13em;
+    background-position: right 0%;
+    a {
+      hgroup {
+        width: 10em;
+        margin-left: 1em;
+        h2 {
+          font-size: 0.975em;
+        }
+      }
+    }
+    nav {
+      margin-left: 1em;
+      width: 10em;
+    }
+    .social {
+      width: 11em;
+      margin-left: 1em;
+      a {
+        font-size: 1.4em;
+      }
+      p {
+        padding-left: 0.6em;
+      }
+    }
+  }
+  .content {
+    width: 32em;
+  }
+}
+
+@include breakpoint(phone) {
+  aside {
+    width: 100%;
+    height: 7em;
+    background: rgb(246,246,246);
+    border-bottom: 1px solid rgb(230,230,230);
+    margin: 0;
+    padding: 0;
+    min-height: 1em;
+    a {
+      hgroup {
+        width: 75%;
+        display: block;
+        text-align: center;
+        margin: 0.8em auto 0;
+        padding-bottom: 0.8em
+      }
+    }
+    nav {
+      border-width: 1px;
+      width: 75%;
+      display: block;
+      text-align: center;
+      margin: 0 auto;
+      ul {
+        &.mobile {
+          display: block;
+          margin-top: 0.5em;
+          li {
+            display: inline;
+            a {
+              padding: 0.6em;
+              display: inline;
+            }
+          }
+        }
+        &.screen {
+          display: none;
+        }
+      }
+    }
+    .social {
+      display: none;
+    }
+  }
+  .content {
+    width: 86%;
+    margin: 0 auto;
+    display: block;
+    float: none;
+  }
+  footer {
+    display: block;
+  }
+}
+
+// No responsonsive for you!
+.ie8, .ie9 {
+  .liner {
+    width: 960px;
+  }
+}
+

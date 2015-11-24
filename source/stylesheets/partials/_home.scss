@@ -1,0 +1,69 @@
+.holder {
+  @include span-columns(12,12);
+  padding-top: 2em;
+  margin-right: 0;
+  img {
+    @include border-radius(100%);
+    width: 7.5em;
+    display: block;
+    margin: 5em auto 2em;
+  }
+}
+
+.main {
+  hgroup {
+    margin: 2em auto;
+    width: 60%;
+    border-bottom: 0.1em solid rgb(230,230,230);
+    display: block;
+    h1 {
+      font-size: 1.9em;
+      color: rgb(140,140,140);
+      text-align: center;
+      padding-bottom: 0.3em;
+    }
+  }
+  p {
+    font-family: $regular-font;
+    color: $stone-grey;
+    font-size: 0.875em;
+    line-height: 1.6em;
+    margin-bottom: 1em;
+    &.break {
+      clear: both;
+    }
+    a {
+      text-decoration: none;
+      color: lighten($stone-grey, 35%);
+      padding-bottom: 0.2em;
+      border-bottom: 0.1em solid lighten($stone-grey, 45%);
+      &:hover, &.active {
+        color: $baby-blue;
+        @include transition(.3s color ease-in-out);
+      }
+    }
+  }
+  .first {
+    font-size: 2em;
+    text-transform: uppercase;
+    float: left;
+    display: block;
+    margin-top: -0.1em;
+  }
+  .page-break {
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 1em;
+    color: rgb(140,140,140);
+  }
+}
+
+@include breakpoint(phone) {
+  .holder {
+    padding-top: 0;
+    img {
+      width: 30%;
+      margin: 2em auto;
+    }
+  }
+}

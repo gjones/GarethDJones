@@ -1,0 +1,30 @@
+!!! 5
+/[if IE 8] <html class="no-js ie8 oldie" lang="en">
+/[if IE 9] <html class="no-js ie9 oldie" lang="en">
+<!--[if gt IE 9]><!-->
+%html{:class => 'no-js', :lang => 'en'}<>
+  <!--<![endif]-->
+  = partial 'layouts/partials/head'
+  %body{:class => page_classes}
+    .liner
+      = partial 'layouts/partials/sidebar'
+
+      .content
+        .main
+          %hgroup.blog-hgroup
+            %h1 Thoughts &amp; Musings
+          %article
+            .intro
+              .holder
+                = image_tag "#{cloud}/images/gareth-cropped.jpg", :alt => 'Gareth Dafydd Jones'
+              %h2
+                = current_page.title
+              .date
+                = current_page.date.strftime('%b %e, %Y')
+              %span.tweet{'data-url' => "http://garethdjones.com" + "#{current_page.url}", :href => "https://twitter.com/intent/tweet?hashtags=null&original_referer=http://garethdjones.com" + "#{current_page.url}" + "&related=null&source=tweetbutton&text=" + "#{current_page.title}" + "by Gareth Jones" + "&url=http://garethdjones.com" + "#{current_page.url}" + "&via=", :target => "_blank"}
+                = link_to "<i class='icon-twitter'></i> Tweet", "https://twitter.com/intent/tweet?original_referer=http://garethdjones.com" + "#{current_page.url}" + "&related=gdjones83&text=" + "#{current_page.title}" + " - by Gareth Jones" + "&tw_p=tweetbutton&url=http://garethdjones.com" + "#{current_page.url}", :class => 'tweetbutton'
+                = link_to "", "http://garethdjones.com" + "#{current_page.url}", :target => '_blank', :class => 'count'
+            = yield
+      = partial 'layouts/partials/google'
+      = partial 'layouts/partials/footer'
+      = partial 'layouts/partials/tweet'

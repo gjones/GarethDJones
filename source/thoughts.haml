@@ -1,0 +1,19 @@
+---
+title: The Thoughts and Musings of the Modern Developer
+description: The blog of Gareth Jones, the thoughts and musings of the modern developer
+pageable: true
+per_page: 10
+---
+
+.main
+  %hgroup.blog-hgroup
+    %h1 Thoughts &amp; Musings
+
+  %ul.recent-articles
+    - blog.articles[0...10].each do |article|
+      %li
+        .date= link_to article.date.strftime('%b %e'), article
+        %h2= link_to article.title, article
+        %p
+          = link_to article.summary(230, ' | continue reading >>').html_safe, article
+        .article-divide

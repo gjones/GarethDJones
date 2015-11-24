@@ -1,0 +1,23 @@
+:javascript
+  $(document).ready(function(){
+    var i="http://cdn.api.twitter.com/1/urls/count.json",
+    s="https://twitter.com/intent/tweet";
+    $(".tweet").each(function(){
+      var e=$(this),
+      t=encodeURIComponent(e.attr("data-url")||document.location.href);
+      text=e.attr("data-text")||document.title,via=e.attr("data-via")||"",
+      related=encodeURIComponent(e.attr("data-related"))||"",
+      hashtags=encodeURIComponent(e.attr("data-hashtags"))||"",
+      e.attr({
+        href:s+"?hashtags="+hashtags+"&original_referer="+encodeURIComponent(document.location.href)+"&related="+related+"&source=tweetbutton&text="+text+"&url="+t+"&via="+via,target:"_blank"
+      }),
+      $.getJSON(i+"?callback=?&url="+t,function(t){
+        t.count!=0&&e.find(".count").html(t.count)
+      })
+    }),
+    $(".tweetbutton").click(function(){
+      var e=$(this).attr("href");
+      return newwindow=window.open(e,"name","height=350,width=440"),
+      window.focus&&newwindow.focus(),!1
+    })
+  })

@@ -1,0 +1,27 @@
+%aside
+  = link_to "<hgroup><h1>Gareth Jones</h1><h2>Designer • Developer</h2></hgroup>", "/"
+  %nav
+    %ul.screen
+      %li
+        = link_to 'About Me', '/', :class => ('active' if current_page.url == '/')
+      %li
+        = link_to 'Notable Projects', '/projects/', :class => ('active' if current_page.url == '/projects/')
+      %li
+        = link_to 'Thoughts', '/thoughts/', :class => ('active' if current_page.url.include? '/thoughts/')
+    %ul.mobile
+      %li
+        = link_to 'About Me', '/', :class => ('active' if current_page.url == '/')
+      %li
+        = link_to 'Projects', '/projects/', :class => ('active' if current_page.url == '/projects/')
+      %li
+        = link_to 'Thoughts', '/thoughts/', :class => ('active' if current_page.url.include? '/thoughts/')
+
+  .social
+    = link_to '<i class="fa fa-envelope"></i>', 'mailto:contact@garethdjones.com'
+    = link_to '<i class="fa fa-twitter"></i>', 'http://twitter.com/gdjones83'
+    = link_to '<i class="fa fa-linkedin"></i>', 'http://www.linkedin.com/in/gdjones83'
+    = link_to '<i class="fa fa-foursquare"></i>', 'http://foursquare.com/gdjones83'
+    %p
+      Imagined &amp; Crafted by
+      %br
+      Gareth D. Jones &copy; #{Time.now.year}
