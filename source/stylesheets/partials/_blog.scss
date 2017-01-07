@@ -199,6 +199,12 @@ em {
   border: 0.1em solid lighten($stone-grey, 55%);
 }
 
+.small-centre {
+  width: 40%;
+  display: block;
+  margin: 1em auto 0;
+}
+
 .caption {
   font-family: $bold-font;
   font-size: 0.75em;

@@ -25,6 +25,8 @@
                 = link_to "<i class='icon-twitter'></i> Tweet", "https://twitter.com/intent/tweet?original_referer=http://garethdjones.com" + "#{current_page.url}" + "&related=gdjones83&text=" + "#{current_page.title}" + " - by Gareth Jones" + "&tw_p=tweetbutton&url=http://garethdjones.com" + "#{current_page.url}", :class => 'tweetbutton'
                 = link_to "", "http://garethdjones.com" + "#{current_page.url}", :target => '_blank', :class => 'count'
             = yield
+            %br 
+            %br
       = partial 'layouts/partials/google'
       = partial 'layouts/partials/footer'
       = partial 'layouts/partials/tweet'
