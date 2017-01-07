@@ -6,7 +6,24 @@ description: Previous Design and Development Projects that I have worked on
 .main.projects
 
   %article
-    = image_tag "#{cloud}/images/gohealth-marketplace.png", :alt => 'GoHealth Insurance Exchange Marketplace', :class => 'gohealth'
+    = image_tag "#{cloud}/images/iOS-Collection@2x.png", :alt => 'FightScores 2 for iOS', :class => 'image-85'
+    %hgroup
+      %h1 Fight Scores 2 for iOS
+
+    %p
+      In 2016 I rebuilt my iOS app, Fight Scores, from the ground up. After a mixed relationship with Core Data I wanted more control over the database, web server and syncing system. I also wanted the freedom to build clients on multiple platform and in multiple languages. I constructed a robust yet flexible database and API in Ruby on Rails which I host on Linode. I then built a universal iOS client in Swift and a web interface in Rails. I am currently working on an updated web app built using Angular.
+    %p
+      Version 2.0 improves upon the original in many ways but some of the standout features are the powerful search functionality, fight recommendations and Spanish language support. There’s a marketing website and blog available at
+      = link_to 'Fightscores.co', 'http://fightscores.co', :target => '_blank'
+      and the app itself is available to download for free on
+      = link_to 'iTunes', 'https://itunes.apple.com/app/fight-scores-2-boxing-scorecards/id1125374157?ls=1&mt=8', :target => '_blank'
+      \.
+
+    %p
+      Technologies Used: Ruby, Rails, Postgres, Capistrano, RSpec, Swift, Angular
+
+  %article
+    = image_tag "#{cloud}/images/gohealth-marketplace.png", :alt => 'GoHealth Insurance Exchange Marketplace', :class => 'image-85'
 
     %hgroup
       %h1 GoHealth Insurance
@@ -21,18 +38,18 @@ description: Previous Design and Development Projects that I have worked on
       Technologies Used: AngularJS, Grails, Grunt, HTML, SCSS, PhantomJS
 
   %article
-    = image_tag "#{cloud}/images/fight-scores.png", :alt => 'Fight Scores - Boxing Scorecards', :class => 'fight-scores'
+    = image_tag "#{cloud}/images/fight-scores.png", :alt => 'Fight Scores - Boxing Scorecards', :class => 'image-100'
 
     %hgroup
       %h1 Fight Scores for iOS
 
     %p
-      Fight Scores is your essential companion to the weekend's boxing viewing. Whether you're in front of your tv or soaking up the atmosphere at a live event, Fight Scores invites you to take on the role of a judge. 
+      Fight Scores is your essential companion to the weekend's boxing viewing. Whether you're in front of your tv or soaking up the atmosphere at a live event, Fight Scores invites you to take on the role of a judge.
 
     %p
       Offering a sleek and modern take on the traditional art of scoring a boxing match, Fight Scores allows you to take detailed notes of each bout as well as scoring them round-by-round. Share your scorecards with friends over your social networks or save them for your own future reference.
-    %p 
-      I designed, built and released Fight Scores as a personal project. It was my first app using Swift and was a great 
+    %p
+      I designed, built and released Fight Scores as a personal project. It was my first app using Swift and was a great
       = link_to 'learning tool', '/thoughts/learning-swift/'
       \. To date it's sold copies in five continents.  You can find Fight Scores at
       = link_to 'Fight Scores on iTunes', 'https://itunes.apple.com/app/fight-scores/id975691413', :target => '_blank'
@@ -41,7 +58,7 @@ description: Previous Design and Development Projects that I have worked on
       Technologies Used: Swift, Core Data, iCloud
 
   %article
-    = image_tag "#{cloud}/images/corkings.png", :alt => 'Corkings Online Wine Journal and Network', :class => 'corkings'
+    = image_tag "#{cloud}/images/corkings.png", :alt => 'Corkings Online Wine Journal and Network', :class => 'image-85'
 
     %hgroup
       %h1 Corkings
@@ -55,10 +72,10 @@ description: Previous Design and Development Projects that I have worked on
       = link_to 'Corkings.com', 'http://corkings.com', :target => '_blank'
       \.
     %p
-      Technologies Used: Ruby, Rails, HAML, SCSS, Postgres, rSpec
+      Technologies Used: Ruby, Rails, HAML, SCSS, Postgres, RSpec
 
   %article.wy
-    = image_tag "#{cloud}/images/warmlyyours-ss.png", :alt => 'WarmlyYours Floor Heating', :class => 'corkings'
+    = image_tag "#{cloud}/images/warmlyyours-ss.png", :alt => 'WarmlyYours Floor Heating', :class => 'image-85'
 
     %hgroup
       %h1 WarmlyYours Inc
