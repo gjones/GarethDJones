@@ -27,6 +27,7 @@ gem 'nokogiri'
 gem 'rack-rewrite'
 gem 'rack-no-www'
 gem 'unf'
+gem 'builder'
 
 # Cross-templating language block fix for Ruby 1.8
 platforms :mri_18 do

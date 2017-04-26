@@ -102,7 +102,7 @@ activate :blog do |blog|
   # blog.page_link = "page/:num"
 end
 
-page "/feed.xml", :layout => false
+page "/thoughts/feed.xml", :layout => false
 
 
 activate :sync do |sync|

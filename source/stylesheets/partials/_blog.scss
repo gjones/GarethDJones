@@ -65,6 +65,15 @@ article {
   strong {
     font-family: $bold-font;
   }
+  ul {
+    list-style: disc;
+    margin: 0 0 1em 1em;
+    li {
+      font-size: 0.875em;
+      line-height: 1.4;
+      padding-bottom: 0.875em;
+    }
+  }
 }
 
 .recent-articles {
