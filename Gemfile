@@ -29,6 +29,9 @@ gem 'rack-no-www'
 gem 'unf'
 gem 'builder'
 
+# Secrets
+gem 'secrets', github: 'jastkand/secrets'
+
 # Cross-templating language block fix for Ruby 1.8
 platforms :mri_18 do
   gem "ruby18_source_location"

@@ -9,4 +9,4 @@
 
 # Ignore .DS_store file
 .DS_Store
-config.rb
+secrets.yml
