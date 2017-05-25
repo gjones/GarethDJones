@@ -26,6 +26,7 @@ gem 'font-awesome-middleman'
 gem 'nokogiri'
 gem 'rack-rewrite'
 gem 'rack-no-www'
+gem 'rack-cors'
 gem 'unf'
 gem 'builder'
 

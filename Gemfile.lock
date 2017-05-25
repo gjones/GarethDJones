@@ -239,6 +239,7 @@ GEM
     padrino-support (0.12.5)
       activesupport (>= 3.1)
     rack (1.5.5)
+    rack-cors (0.4.1)
     rack-livereload (0.3.16)
       rack
     rack-no-www (0.0.2)
@@ -298,6 +299,7 @@ DEPENDENCIES
   middleman-livereload (~> 3.1.0)
   middleman-sync (~> 3.0.12)
   nokogiri
+  rack-cors
   rack-no-www
   rack-rewrite
   ruby18_source_location

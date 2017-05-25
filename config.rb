@@ -6,8 +6,17 @@ require 'secrets'
 require 'susy'
 require 'rack/rewrite'
 require 'rack/no-www'
+require 'rack/cors'
 
 use Rack::NoWWW
+use Rack::Cors do
+  allow do
+    origins '*'
+    resource '*',
+        :headers => :any,
+        :methods => [:get, :post, :options]
+  end
+end
 
 Secrets::Config.configure do |config|
   config.secrets_file = 'secrets.yml' # 'secrets.yml' by default
