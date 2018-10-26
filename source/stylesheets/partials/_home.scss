@@ -26,6 +26,9 @@
   p {
     font-family: $regular-font;
     color: $stone-grey;
+    @media (prefers-color-scheme: dark) {
+       color: rgb(180,180,180)
+    }
     font-size: 0.875em;
     line-height: 1.6em;
     margin-bottom: 1em;

@@ -129,6 +129,9 @@ article {
       border-bottom: none;
       text-decoration: none;
       color: $stone-grey;
+      @media (prefers-color-scheme: dark) {
+        color: rgb(180,180,180)
+      }
       &:hover {
         color: darken($stone-grey, 20%);
         @include transition(color .3s ease-in);
